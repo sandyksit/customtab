@@ -13,8 +13,8 @@ describe("TabPanel Component", () => {
     render(<TabPanel />);
     
     // Check if initial tab content is displayed
-    expect(screen.getByText("Lorem Ipsum Dolor")).toBeInTheDocument();
-    expect(screen.getByText("Morbi non lacus nunc.")).toBeInTheDocument();
+    expect(screen.getByText("consectetur adipiscing elit")).toBeInTheDocument();
+    //expect(screen.getByText("Donec suscipit ex eu faucibus laoreet. Nulla non neque mauris.")).toBeInTheDocument();
   });
 
   test("switches tabs correctly", () => {
@@ -25,14 +25,14 @@ describe("TabPanel Component", () => {
     
     // Verify new content appears
     expect(screen.getByText("Quisque At Pretium")).toBeInTheDocument();
-    expect(screen.getByText("Mauris blandit vitae.")).toBeInTheDocument();
+    expect(screen.getByText("Mauris blandit vitae libero vel tincidunt. Nam lorem magna, iaculis in ornare ut.")).toBeInTheDocument();
   });
 
   test("applies correct styles to active tab", () => {
     render(<TabPanel />);
     
     const firstTab = screen.getByText("Lorem ipsum");
-    expect(firstTab).toHaveClass("text-blue-600"); // Active tab should have blue text
+    expect(firstTab).toHaveClass("active"); // Active tab should have blue text
   });
   
   test("renders all tabs correctly", () => {

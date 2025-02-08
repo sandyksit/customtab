@@ -1,7 +1,8 @@
 {
   "name": "tab-panel-component",
   "version": "1.0.0",
-  "description": "A modular and reusable tab panel component in React.",
+  "description": "custom tab component",
+  "author": "Sandeep",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
